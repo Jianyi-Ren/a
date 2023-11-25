@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "expo-cli": "^6.3.10",
     "react": "17.0.1",
     "react-native": "0.64.2"
   },

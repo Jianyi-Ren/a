@@ -4,28 +4,43 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUsers } from '../redux/userSlice';
 
+
+const UserCard = ({ user }) => (
+  <div className="user-card">
+    <h3>{user.username}</h3>
+    <p>{user.userprofile.name}</p>
+    <p>{user.userprofile.location.city}, {user.userprofile.location.province}, {user.userprofile.location.country}</p>
+    <p>{user.userprofile.description}</p>
+    {/* 其他用户信息 */}
+  </div>
+);
+
+
 const UserList = () => {
   const dispatch = useDispatch();
-  const userList = useSelector((state) => state.user.userList);
+  const users = useSelector((state) => state.user.userList);
 
   // Simulate fetching users from an API
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         // Replace this with your actual API call to fetch users
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const response = await fetch('http://localhost:8000/api/users');
         const data = await response.json();
         dispatch(setUsers(data));
+
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('~~~~~~~~:', error);
       }
     };
 
     fetchUsers();
   }, [dispatch]);
-  console.log('====123', userList)
+
+  console.log('userList:', users);
   return (
-    <Text>Open up App.js to start working on your app!</Text>
+    
+    <Text>{JSON.stringify(users)}</Text>
   );
 };
 

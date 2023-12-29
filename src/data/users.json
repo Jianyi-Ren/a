@@ -1,0 +1,181 @@
+[
+    {
+      "id": 1,
+      "nickname": "小明",
+      "gender": "男",
+      "ageRange": "18-30",
+      "location": {
+        "country": "中国",
+        "state": "上海市",
+        "city": "上海市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "认识新朋友",
+      "description": "我是一个性格开朗的人，喜欢交朋友",
+      "avatarUrl": "https://i.ibb.co/yd06VCf/8-c03-Zcvf1tk8-Gue7-1.png"
+    },
+    {
+      "id": 2,
+      "nickname": "小红",
+      "gender": "女",
+      "ageRange": "22-35",
+      "location": {
+        "country": "中国",
+        "state": "北京市",
+        "city": "北京市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "找到真爱",
+      "description": "我是一个热爱生活的女孩，喜欢旅行和摄影",
+      "avatarUrl": "https://i.ibb.co/ZVzxL4z/8-i-VYSY0-K5-GLy6hv-F.png"
+    },
+    {
+      "id": 3,
+      "nickname": "阿翔",
+      "gender": "男",
+      "ageRange": "25-40",
+      "location": {
+        "country": "中国",
+        "state": "广东省",
+        "city": "广州市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找聊天伙伴",
+      "description": "我喜欢音乐和电影，希望认识有相同兴趣的朋友",
+      "avatarUrl": "https://i.ibb.co/2djDkfc/8-OA3-Xb-Njjnm3-Hogs.png"
+    },
+    {
+      "id": 4,
+      "nickname": "小丽",
+      "gender": "女",
+      "ageRange": "20-30",
+      "location": {
+        "country": "中国",
+        "state": "四川省",
+        "city": "成都市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找同城朋友",
+      "description": "喜欢美食和旅行，希望认识成都的朋友一起玩",
+      "avatarUrl": "https://i.ibb.co/DLnXW4b/8-e-Wcc2-Qf8qur-AZrk.png"
+    },
+    {
+      "id": 5,
+      "nickname": "大明",
+      "gender": "男",
+      "ageRange": "28-45",
+      "location": {
+        "country": "中国",
+        "state": "湖北省",
+        "city": "武汉市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找结婚对象",
+      "description": "我是个稳重的人，希望能找到一个共度一生的伴侣",
+      "avatarUrl": "https://i.ibb.co/2djDkfc/8-OA3-Xb-Njjnm3-Hogs.png"
+    },
+    {
+      "id": 6,
+      "nickname": "小芳",
+      "gender": "女",
+      "ageRange": "22-35",
+      "location": {
+        "country": "中国",
+        "state": "浙江省",
+        "city": "杭州市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找旅行伙伴",
+      "description": "热爱旅行和摄影，希望找到一起探索世界的朋友",
+      "avatarUrl": "https://i.ibb.co/ZVzxL4z/8-i-VYSY0-K5-GLy6hv-F.png"
+    },
+    {
+      "id": 7,
+      "nickname": "小强",
+      "gender": "男",
+      "ageRange": "24-35",
+      "location": {
+        "country": "中国",
+        "state": "江苏省",
+        "city": "南京市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找运动伙伴",
+      "description": "喜欢户外运动，希望找到一起锻炼的朋友",
+      "avatarUrl": "https://i.ibb.co/ZVzxL4z/8-i-VYSY0-K5-GLy6hv-F.png"
+    },
+    {
+      "id": 8,
+      "nickname": "小雪",
+      "gender": "女",
+      "ageRange": "21-30",
+      "location": {
+        "country": "中国",
+        "state": "陕西省",
+        "city": "西安市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找读书伙伴",
+      "description": "喜欢文学和艺术，希望找到一起阅读的朋友",
+      "avatarUrl": "https://i.ibb.co/DLnXW4b/8-e-Wcc2-Qf8qur-AZrk.png"
+    },
+    {
+      "id": 9,
+      "nickname": "大牛",
+      "gender": "男",
+      "ageRange": "30-40",
+      "location": {
+        "country": "中国",
+        "state": "重庆市",
+        "city": "重庆市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找技术交流伙伴",
+      "description": "是一名软件工程师，喜欢研究新技术，希望找到一起学习的朋友",
+      "avatarUrl": "https://i.ibb.co/ZVzxL4z/8-i-VYSY0-K5-GLy6hv-F.png"
+    },
+    {
+      "id": 10,
+      "nickname": "小强",
+      "gender": "男",
+      "ageRange": "24-35",
+      "location": {
+        "country": "中国",
+        "state": "江苏省",
+        "city": "南京市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找运动伙伴",
+      "description": "喜欢户外运动，希望找到一起锻炼的朋友",
+      "avatarUrl": "https://i.ibb.co/ZVzxL4z/8-i-VYSY0-K5-GLy6hv-F.png"
+    },
+    {
+      "id": 11,
+      "nickname": "小雪",
+      "gender": "女",
+      "ageRange": "21-30",
+      "location": {
+        "country": "中国",
+        "state": "陕西省",
+        "city": "西安市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找读书伙伴",
+      "description": "喜欢文学和艺术，希望找到一起阅读的朋友",
+      "avatarUrl": "https://i.ibb.co/DLnXW4b/8-e-Wcc2-Qf8qur-AZrk.png"
+    },
+    {
+      "id": 12,
+      "nickname": "大牛",
+      "gender": "男",
+      "ageRange": "30-40",
+      "location": {
+        "country": "中国",
+        "state": "重庆市",
+        "city": "重庆市"
+      },
+      "acceptance": "接受性行为",
+      "purpose": "寻找技术交流伙伴",
+      "description": "是一名软件工程师，喜欢研究新技术，希望找到一起学习的朋友",
+      "avatarUrl": "https://i.ibb.co/ZVzxL4z/8-i-VYSY0-K5-GLy6hv-F.png"
+    }]

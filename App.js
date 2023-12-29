@@ -16,13 +16,7 @@ const theme = {
       color: 'white',  // 全局按钮文本颜色
       borderRadius: 10
     },
-    buttonStyle: {
-      backgroundColor: primary,  // 全局按钮背景颜色
-      borderRadius: 10,  // 全局按钮圆角
-      backgroundColor: "red",  // 全局按钮背景颜色
-    },
     blueButtonStyle: {
-      backgroundColor: "yellow",  // 全局按钮背景颜色
       backgroundColor: primary,  // 全局按钮背景颜色
       borderRadius: 5,  // 全局按钮圆角
     },
@@ -49,7 +43,7 @@ export default function App() {
     <Provider style={styles.container} store={store}>
       <ThemeProvider theme={theme}>
         <View style={styles.content}>
-          <UserDetail />
+          <UserList />
         </View>
       </ThemeProvider>
     </Provider>

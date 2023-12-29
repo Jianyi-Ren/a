@@ -2,26 +2,13 @@ import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { Avatar, Text, Button, Icon, useTheme } from 'react-native-elements';
 
+import users from '../data/users.json'; 
+
 const UserDetail = () => {
   // Assuming user data is passed through navigation route params
-  // const { user } = route.params;
-    const user = {
-        'id': 1,
-        'nickname': '小明',
-        'gender': '男',
-        'ageRange': '18-30',
-        'location': {
-            'country': '中国',
-            'state': '上海市',
-            'city': '上海市',
-        },
-        'acceptance': '接受性行为',
-        'purpose': '认识新朋友',
-        'description': '我是一个性格开朗的人，喜欢交朋友',  
-        'avatarUrl': 'https://i.ibb.co/yd06VCf/8-c03-Zcvf1tk8-Gue7-1.png',
-    }
+  const { theme } = useTheme(); 
+  const user = users[0];
 
-    const { theme } = useTheme(); 
     // 获取屏幕宽度
     const screenWidth = Dimensions.get('window').width;
     return (

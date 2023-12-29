@@ -1,10 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
-import UserList from './src/components/UserList';
-import UserDetail from './src/components/UserDetail';
 import { ThemeProvider, Button } from 'react-native-elements';
-
+import AppNavigator from './AppNavigator'; // 导入你的 AppNavigator
 
 const primary = "#39ace7"
 const theme = {
@@ -42,9 +40,8 @@ export default function App() {
   return (
     <Provider style={styles.container} store={store}>
       <ThemeProvider theme={theme}>
-        <View style={styles.content}>
-          <UserList />
-        </View>
+        {/* 将整个应用包裹在 AppNavigator 中 */}
+        <AppNavigator />
       </ThemeProvider>
     </Provider>
   );

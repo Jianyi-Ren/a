@@ -1,38 +1,50 @@
 import React from 'react';
-import { View, ScrollView, FlatList, StyleSheet } from 'react-native';
+import { View, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { ListItem, Avatar, Text, Icon, useTheme } from 'react-native-elements';
-
+import { useNavigation } from '@react-navigation/native';
 import userList from '../data/users.json'; 
 
 const UserListScreen = () => {
+  const navigation = useNavigation();
+
+  const navigateToUserDetail = (user) => {
+    // 传递用户数据作为参数
+    console.log(user)
+    navigation.navigate('UserDetail', { user: user/* 用户数据对象 */ });
+  };
+
+
+
   const renderUserItem = (item) => (
-    <ListItem key={item.id} bottomDivider containerStyle={styles.usercard}>
-      <Avatar
-        rounded
-        size="large"
-        source={{ uri: item.avatarUrl }}
-      />
-      <ListItem.Content style={styles.content}>
-        <ListItem.Title>
-          <Text style={styles.nameText}>
-            {item.nickname}{' '}
-            <Icon 
-              name={item.gender === '男' ? 'venus' : 'mars'}
-              type='font-awesome'
-              color={item.gender === '男' ? '#2f98e7' : 'pink'}
-              size={styles.nameText.fontSize}
-              style={styles.iconStyle} 
-            />
-          </Text>
-        </ListItem.Title>
-        <ListItem.Subtitle>
-          {item.ageRange}岁 / {item.location.state}
-        </ListItem.Subtitle>
-        <ListItem.Subtitle style={styles.description}>
-          {item.description}
-        </ListItem.Subtitle>
-      </ListItem.Content>
-    </ListItem>
+    <TouchableOpacity  key={item.id} onPress={() => navigateToUserDetail(item)}> 
+      <ListItem key={item.id} bottomDivider containerStyle={styles.usercard}>
+        <Avatar
+          rounded
+          size="large"
+          source={{ uri: item.avatarUrl }}
+        />
+        <ListItem.Content style={styles.content}>
+          <ListItem.Title>
+            <Text style={styles.nameText}>
+              {item.nickname}{' '}
+              <Icon 
+                name={item.gender === '男' ? 'venus' : 'mars'}
+                type='font-awesome'
+                color={item.gender === '男' ? '#2f98e7' : 'pink'}
+                size={styles.nameText.fontSize}
+                style={styles.iconStyle} 
+              />
+            </Text>
+          </ListItem.Title>
+          <ListItem.Subtitle>
+            {item.ageRange}岁 / {item.location.state}
+          </ListItem.Subtitle>
+          <ListItem.Subtitle style={styles.description}>
+            {item.description}
+          </ListItem.Subtitle>
+        </ListItem.Content>
+      </ListItem>
+    </TouchableOpacity>
   );
 
   return (
@@ -52,7 +64,6 @@ const UserListScreen = () => {
  */
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 70,
     paddingVertical: 20,
     borderRadius: 10, // 边框圆角
   },

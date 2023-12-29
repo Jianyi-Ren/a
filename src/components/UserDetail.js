@@ -2,12 +2,11 @@ import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { Avatar, Text, Button, Icon, useTheme } from 'react-native-elements';
 
-import users from '../data/users.json'; 
 
-const UserDetail = () => {
+const UserDetail = ({ route }) => {
   // Assuming user data is passed through navigation route params
   const { theme } = useTheme(); 
-  const user = users[0];
+  const { user } = route.params;
 
     // 获取屏幕宽度
     const screenWidth = Dimensions.get('window').width;
@@ -25,7 +24,7 @@ const UserDetail = () => {
         <View style={styles.userInfoContainer}>
             <Text h4 style={styles.title}>{`${user.nickname} `}
             <Icon
-                name={user.gender === '男' ? 'male' : 'female'}
+                name={user.gender === '男' ? 'mars' : 'venus'}
                 type='font-awesome'
                 color={user.gender === '男' ? '#2f98e7' : 'pink'}
             />

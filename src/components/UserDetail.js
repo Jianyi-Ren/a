@@ -36,14 +36,16 @@ const UserDetail = () => {
 
         {/* 2. User Info */}
         <View style={styles.userInfoContainer}>
-            <Text h4>{`${user.nickname} `}
+            <Text h4 style={styles.title}>{`${user.nickname} `}
             <Icon
                 name={user.gender === '男' ? 'male' : 'female'}
                 type='font-awesome'
                 color={user.gender === '男' ? '#2f98e7' : 'pink'}
             />
             </Text>
-            <Text h5>{`${user.ageRange}岁 / ${user.location.city}`}</Text>
+            <Text h5 style={styles.content}>
+              {`${user.ageRange}岁 / ${user.location.country} ${user.location.city}`}
+            </Text>
         </View>
 
         {/* 4. User Details */}
@@ -62,11 +64,11 @@ const UserDetail = () => {
         <View style={styles.buttonsContainer}>
             <Button
                 title="关注"
-                buttonStyle={[styles.followButton, { width: screenWidth / 4 }]}
+                buttonStyle={[theme.Button.blueButtonStyle, { width: screenWidth / 3 }]}
             />
             <Button
-                title="聊天"
-                buttonStyle={[styles.chatButton, { width: screenWidth / 4 }]}
+                title="发消息"
+                buttonStyle={[theme.Button.whiteButtonStyle, { width: screenWidth / 3 }]}
                 titleStyle={{ color: theme.colors.primary }}
                 type="outline"
             />
@@ -115,12 +117,6 @@ const styles = StyleSheet.create({
       alignItems: 'center',  // 垂直居中对齐按钮
       width: '100%',
       padding: 30,
-    },
-    followButton: {
-      backgroundColor: '#2f98e7',
-    },
-    chatButton: {
-      borderColor: '#2f98e7',
     },
   });
 

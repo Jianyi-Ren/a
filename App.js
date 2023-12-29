@@ -14,9 +14,22 @@ const theme = {
   Button: {
     titleStyle: {
       color: 'white',  // 全局按钮文本颜色
+      borderRadius: 10
     },
     buttonStyle: {
       backgroundColor: primary,  // 全局按钮背景颜色
+      borderRadius: 10,  // 全局按钮圆角
+      backgroundColor: "red",  // 全局按钮背景颜色
+    },
+    blueButtonStyle: {
+      backgroundColor: "yellow",  // 全局按钮背景颜色
+      backgroundColor: primary,  // 全局按钮背景颜色
+      borderRadius: 5,  // 全局按钮圆角
+    },
+    whiteButtonStyle: {
+      backgroundColor: "white",  // 全局按钮背景颜色
+      borderRadius: 5,  // 全局按钮圆角
+      borderWidth: 1, // 调整边框宽度
     },
     containerStyle: {
       margin: 10,  // 全局按钮外边距

@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import store from './src/redux/store';
 import { ThemeProvider, Button } from 'react-native-elements';
 import AppNavigator from './AppNavigator'; // 导入你的 AppNavigator
+import { NavigationContainer } from '@react-navigation/native';
 
 const primary = "#39ace7"
 const theme = {
@@ -41,7 +42,9 @@ export default function App() {
     <Provider style={styles.container} store={store}>
       <ThemeProvider theme={theme}>
         {/* 将整个应用包裹在 AppNavigator 中 */}
-        <AppNavigator />
+        <NavigationContainer>
+          <AppNavigator />
+        </NavigationContainer>
       </ThemeProvider>
     </Provider>
   );

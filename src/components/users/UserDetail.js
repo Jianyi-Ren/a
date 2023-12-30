@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      padding: 20,
     },
     // 1. Avatar
     avatarContainer: {
@@ -82,7 +81,7 @@ const styles = StyleSheet.create({
     // 3. User Details
     userDetailsContainer: {
       width: '100%',
-      padding: 40,
+      paddingHorizontal: 60,
 
     },
     title: {
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-between',
       alignItems: 'center',  // 垂直居中对齐按钮
       width: '100%',
-      padding: 30,
+      paddingHorizontal: 40,
     },
   });
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { ListItem, Avatar, Text, Icon, useTheme } from 'react-native-elements';
+import { ListItem, Avatar, Text, Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
-import userList from '../data/users.json'; 
+import userList from '../../data/users.json'; 
 
 const UserListScreen = () => {
   const navigation = useNavigation();

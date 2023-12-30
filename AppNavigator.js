@@ -1,18 +1,20 @@
 // AppNavigator.js
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import UserList from './src/components/UserList';
-import UserDetail from './src/components/UserDetail';
-import Profile from './src/components/Profile';
-import Search from './src/components/Search';
-import Message from './src/components/Message';
-import Setting from './src/components/Setting';
-import { Icon } from 'react-native-elements';
+import UserList from './src/components/users/UserList';
+import UserDetail from './src/components/users/UserDetail';
+import Profile from './src/components/accounts/Profile';
+import Search from './src/components/users/Search';
+import Message from './src/components/messages/Message';
+import Setting from './src/components/settings/Setting';
+import { Icon, useTheme } from 'react-native-elements';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+
 
 const UserStackNavigator = () => {
     return (
@@ -24,18 +26,17 @@ const UserStackNavigator = () => {
   };
 
 const AppNavigator = () => {
+  const { theme } = useTheme(); 
   return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarLabel: '个人资料',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="user" type="font-awesome" color={color} size={size} />
-          ),
-        }}
-      />
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: 'gray',
+        tabBarLabelStyle: {
+          fontSize: 16,
+        },
+      })}
+    >
       <Tab.Screen
         name="Search"
         component={Search}
@@ -49,12 +50,15 @@ const AppNavigator = () => {
       <Tab.Screen
         name="Message"
         component={Message}
-        options={{
+        options={({ navigation }) => ({
           tabBarLabel: '消息',
           tabBarIcon: ({ color, size }) => (
             <Icon name="envelope" type="font-awesome" color={color} size={size} />
           ),
-        }}
+          tabBarButton: (props) => (
+            <TabBarCustomButton {...props} onPress={() => navigation.navigate('Message')} disabled={true} />
+          ), // 使用自定义按钮组件，设置 disabled 为 true
+        })}
       />
       <Tab.Screen
         name="Settings"
@@ -67,6 +71,26 @@ const AppNavigator = () => {
         }}
       />
     </Tab.Navigator>
+  );
+};
+
+// Custom button component to disable the tab
+const TabBarCustomButton = ({ accessibilityState, children, onPress, disabled }) => {
+  const focused = accessibilityState.selected; // 获取当前标签是否被选中
+
+  return (
+    <TouchableOpacity
+      disabled={disabled}
+      onPress={onPress}
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: focused ? 'grey' : 'white', // 当标签被选中时为灰色，否则为白色
+      }}
+    >
+      {children}
+    </TouchableOpacity>
   );
 };
 

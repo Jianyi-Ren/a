@@ -7,7 +7,7 @@ const Setting = ({ navigation }) => {
   const data = [
     { key: '账号管理', title: '账号管理' },
     { key: '关于小A', title: '关于小A' },
-    { key: '退出登录', title: '退出登录' },
+    { key: '登出', title: '登出' },
   ];
 
   const renderItem = ({ item }) => (
@@ -22,13 +22,13 @@ const Setting = ({ navigation }) => {
     // 根据点击的项导航到相应的页面
     switch (key) {
       case '关于小A':
-        navigation.navigate('About');
+        navigation.navigate('关于小A');
         break;
       case '账号管理':
-        navigation.navigate('Profile');
+        navigation.navigate('账号管理');
         break;
-      case '退出登录':
-        navigation.navigate('Logout');
+      case '登出':
+        navigation.navigate('登出');
         break;
       default:
         break;

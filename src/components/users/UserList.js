@@ -13,8 +13,6 @@ const UserListScreen = () => {
     navigation.navigate('UserDetail', { user: user/* 用户数据对象 */ });
   };
 
-
-
   const renderUserItem = (item) => (
     <TouchableOpacity  key={item.id} onPress={() => navigateToUserDetail(item)}> 
       <ListItem key={item.id} bottomDivider containerStyle={styles.usercard}>
@@ -64,7 +62,7 @@ const UserListScreen = () => {
  */
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 20,
+    paddingVertical: 10,
     borderRadius: 10, // 边框圆角
   },
   usercard: {

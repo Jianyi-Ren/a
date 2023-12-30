@@ -10,9 +10,14 @@ import Logout from './src/components/accounts/Logout';
 import Message from './src/components/messages/Message';
 import Profile from './src/components/accounts/Profile';
 import Search from './src/components/users/Search';
-import Setting from './src/components/settings/Setting';
 import UserDetail from './src/components/users/UserDetail';
 import UserList from './src/components/users/UserList';
+
+// 设置
+import Setting from './src/components/settings/Setting';
+import Privacy from './src/components/settings/Privacy';
+import Feedbacks from './src/components/settings/Feedbacks';
+import VersionInfo from './src/components/settings/VersionInfo';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -27,10 +32,13 @@ const UsersStack = () => (
 
 const SettingsStack = () => (
   <Stack.Navigator>
-    <Stack.Screen name="Setting" component={Setting} />
-    <Stack.Screen name="About" component={About} /> 
-    <Stack.Screen name="Profile" component={Profile} />
-    <Stack.Screen name="Logout" component={Logout} />
+    <Stack.Screen name="设置" component={Setting} />
+    <Stack.Screen name="关于小A" component={About} /> 
+    <Stack.Screen name="账号管理" component={Profile} />
+    <Stack.Screen name="登出" component={Logout} />
+    <Stack.Screen name="用户协议和隐私政策" component={Privacy} />
+    <Stack.Screen name="意见反馈" component={Feedbacks} />
+    <Stack.Screen name="版本信息" component={VersionInfo} />
   </Stack.Navigator>
 );
 
@@ -47,10 +55,9 @@ const AppNavigator = () => {
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: theme.colors.primary,
         tabBarInactiveTintColor: 'gray',
-        tabBarStyle: { alignItems: 'center', justifyContent: 'center', backgroundColor: 'yellow' },
-        tabBarLabelStyle: {
-          fontSize: 16,
-        },
+        tabBarStyle: { alignItems: 'flex-end', marginTop: 15, marginBottom: 0 }, // 调整整个 tabBar 的位置
+        tabBarLabelStyle: { marginBottom: 5 },
+        tabBarIconStyle: { marginBottom: 5 },
       })}>
       <Tab.Screen 
         name="Users" 
